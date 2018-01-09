@@ -1,0 +1,16 @@
+<table class="index">
+  <tr>
+    <th style="width: 60px; text-align: center;">詳細</th>
+    <th><%= ZomekiBookLibrary::Book.human_attribute_name :title %></th>
+    <th><%= ZomekiBookLibrary::Book.human_attribute_name :author %></th>
+  </tr>
+  <%- @items.each do |item| -%>
+  <tr class="<%= cycle '', 'cycle' %>">
+    <td style="text-align: center;"><%= link_to :show, { action: :show, id: item } %></td>
+    <td><%= item.title %></td>
+    <td><%= item.author %></td>
+  </tr>
+  <%- end -%>
+</table>
+
+<%= will_paginate @items %>

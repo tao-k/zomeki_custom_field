@@ -1,0 +1,19 @@
+<table class="index">
+  <tr>
+    <th><%= ZomekiBookLibrary::Book.human_attribute_name :title %></th>
+    <th><%= ZomekiBookLibrary::Book.human_attribute_name :author %></th>
+    <th><%= ZomekiBookLibrary::Book.human_attribute_name :summary %></th>
+    <th><%= ZomekiBookLibrary::Book.human_attribute_name :description %></th>
+    <th><%= ZomekiBookLibrary::Book.human_attribute_name :published_at %></th>
+  </tr>
+  <%- @items.each do |item| -%>
+  <tr>
+    <td><%= item.title %></td>
+    <td><%= item.author %></td>
+    <td><%= item.summary %></td>
+    <td><%= item.description %></td>
+    <td><%=l item.published_at if item.published_at %></td>
+  </tr>
+  <%- end -%>
+</table>
+

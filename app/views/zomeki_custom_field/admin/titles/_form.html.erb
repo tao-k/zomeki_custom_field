@@ -1,0 +1,29 @@
+<table class="show">
+  <tr>
+    <th><%= @item.locale(:title) %></th>
+    <td><%= f.text_field :title, :class => 'name' %></td>
+  </tr>
+  <tr>
+    <th><%= @item.locale(:author) %></th>
+    <td><%= f.text_field :author, :class => 'name' %></td>
+  </tr>
+  <tr>
+    <th><%= @item.locale(:summary) %></th>
+    <td><%= f.text_field :summary, :class => 'name' %></td>
+  </tr>
+  <tr>
+    <th><%= @item.locale(:description) %></th>
+    <td><%= f.text_field :description, :class => 'name' %></td>
+  </tr>
+  <tr>
+    <th><%= @item.locale(:published_at) %></th>
+    <td><%= f.text_field :published_at, value: value_for_datetimepicker(f.object_name, :published_at),
+                         style: 'width: 150px;', class: 'datepicker' %></td>
+  </tr>
+</table>
+<script type="text/javascript">
+$(document).ready(function () {
+  <%= disable_enter_script -%>
+  $('input.datepicker').datepicker();
+});
+</script>

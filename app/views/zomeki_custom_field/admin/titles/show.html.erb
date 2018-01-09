@@ -1,0 +1,22 @@
+<table class="show">
+  <tr>
+    <th><%= @item.locale(:title) %></th>
+    <td><%= @item.title %></td>
+  </tr>
+  <tr>
+    <th><%= @item.locale(:author) %></th>
+    <td><%= @item.author %></td>
+  </tr>
+  <tr>
+    <th><%= @item.locale(:summary) %></th>
+    <td><%= @item.summary %></td>
+  </tr>
+  <tr>
+    <th><%= @item.locale(:description) %></th>
+    <td><%= @item.description %></td>
+  </tr>
+  <tr>
+    <th><%= @item.locale(:published_at) %></th>
+    <td><%=l @item.published_at if @item.published_at %></td>
+  </tr>
+</table>

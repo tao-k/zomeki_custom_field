@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      zomeki_custom_field/title: データベース
+    attributes:
+      zomeki_custom_field/title:
+        title: タイトル
+        author: 著者
+        summary: 概要
+        description: 説明
+        published_at: 発行日
