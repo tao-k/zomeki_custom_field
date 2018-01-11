@@ -1,11 +1,24 @@
 ja:
   activerecord:
     models:
-      zomeki_custom_field/title: データベース
+      custom_field/title: データベース
+      custom_field/item: アイテム項目
     attributes:
-      zomeki_custom_field/title:
-        title: タイトル
-        author: 著者
-        summary: 概要
-        description: 説明
-        published_at: 発行日
+      custom_field/title:
+        id: ID
+        state: 状態
+        title: データベース名
+        body: HTML
+        sort_no: 並び順
+        created_at: 作成日時
+        updated_at: 更新日時
+      custom_field/item:
+        state: 状態
+        name: アイテムID
+        title: アイテム名
+        item_type: 種別
+        item_options: 選択候補
+        style_attribute: スタイルシート
+        sort_no: 並び順
+        created_at: 作成日時
+        updated_at: 更新日時

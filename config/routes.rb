@@ -1,4 +1,4 @@
-mod = "zomeki_custom_field"
+mod = "custom_field"
 ZomekiCMS::Application.routes.draw do
   ## admin
   scope "#{ZomekiCMS::ADMIN_URL_PREFIX}/#{mod}/c:concept", :module => mod, :as => mod do
@@ -12,7 +12,11 @@ ZomekiCMS::Application.routes.draw do
   #  ## contents
     resources(:titles,
       :controller => 'admin/titles',
-      :path       => ':content/titles')
+      :path       => ':content/titles') do
+      resources :items,
+        :controller => 'admin/items'
+
+      end
 
     ## nodes
     resources :node_titles,
@@ -30,6 +34,7 @@ ZomekiCMS::Application.routes.draw do
     get 'node_books(/index.:format)' => 'public/node/books#index'
   end
 end
+
 ZomekiCustomField::Engine.routes.draw do
   root "#{mod}/contents#index"
   scope "/", :module => mod, :as => mod do

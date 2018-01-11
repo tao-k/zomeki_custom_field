@@ -1,6 +1,6 @@
 class CreateZomekiCustomFieldTitles < ActiveRecord::Migration[5.0]
   def change
-    create_table :zomeki_custom_field_titles do |t|
+    create_table :custom_field_titles do |t|
       t.references :content
       t.string     :state
       t.string     :title

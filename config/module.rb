@@ -1,4 +1,4 @@
-Cms::Lib::Modules::ModuleSet.draw :zomeki_custom_field, 'カスタムフィールド：プラグイン', 999 do |mod|
+Cms::Lib::Modules::ModuleSet.draw :custom_field, 'カスタムフィールド：プラグイン', 999 do |mod|
 #  ## contents
   mod.content :titles, 'カスタムフィールド：プラグイン'
 

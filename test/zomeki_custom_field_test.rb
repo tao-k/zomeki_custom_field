@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class ZomekiCustomField::Test < ActiveSupport::TestCase
+class CustomField::Test < ActiveSupport::TestCase
   test "truth" do
-    assert_kind_of Module, ZomekiCustomField
+    assert_kind_of Module, CustomField
   end
 end

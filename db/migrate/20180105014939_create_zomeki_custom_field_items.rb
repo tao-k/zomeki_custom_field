@@ -1,6 +1,6 @@
 class CreateZomekiCustomFieldItems < ActiveRecord::Migration[5.0]
   def change
-    create_table :zomeki_custom_field_items do |t|
+    create_table :custom_field_items do |t|
       t.belongs_to :title
       t.string     :state
       t.string     :name
